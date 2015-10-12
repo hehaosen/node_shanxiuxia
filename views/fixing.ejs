@@ -1,0 +1,195 @@
+<% include header %>
+<!--fix menu start -->
+<input type="text" id="J_id" style="display: none"  value="{$phone.id}"/>
+<input type="text" id="J_name" style="display:none" value="{$phone.name}"/>
+<script type="text/javascript">
+    var fixingId<?php if($id){ ?>={$id}<?php } ?>;
+</script>
+<div class="layout1200">
+    <ul class="fixMenu mt40 hand">
+        <li class="first select" data-id="J_iphone">
+            iPhone
+        </li>
+        <li data-id="J_ipad">
+            iPad/Mac
+        </li>
+        <li data-id="J_galaxy">
+            三星
+        </li>
+        <li data-id="J_mi">
+            小米
+        </li>
+        <li data-id="J_hw">
+            华为
+        </li>
+    </ul>
+    <div class="fixModel mt40">
+        <div class="support fl">支持 |</div>
+        <ul id="J_iphone" style="display: block">
+            <li data-id="1" class="chosed">iPhone6</li>
+            <li data-id="2">iPhone6 Plus</li>
+            <li data-id="3">iPhone5s</li>
+            <li data-id="4">iPhone5c</li>
+            <li data-id="5">iPhone5</li>
+            <li data-id="6">iPhone4s</li>
+            <li data-id="7">iPhone4</li>
+        </ul>
+        <ul id="J_ipad">
+            <li data-id="8">iPad mini 3</li>
+            <li data-id="9">iPad mini 2</li>
+            <li data-id="11">iPad Air 2</li>
+            <li data-id="12">iPad Air</li>
+            <!--<li data-id="13">MacBook Air</li>-->
+            <!--<li data-id="14">MacBook Pro</li>-->
+        </ul>
+        <ul id="J_galaxy">
+            <li data-id="15">Galaxy Note 4</li>
+            <li data-id="16">Galaxy Note 3</li>
+            <li data-id="18">Galaxy Note 2</li>
+            <li data-id="19">Galaxy Note Edge</li>
+            <li data-id="20">Galaxy A8</li>
+            <li data-id="21">Galaxy A7</li>
+            <li data-id="23">Galaxy A5</li>
+            <li data-id="24">Galaxy A3</li>
+            <li data-id="25">Galaxy J7</li>
+            <li data-id="26">Galaxy S6</li>
+            <li data-id="27">Galaxy S5</li>
+            <li data-id="28">Galaxy S4</li>
+        </ul>
+        <ul id="J_mi">
+            <li data-id="29">小米 4</li>
+            <li data-id="30">小米 3</li>
+            <li data-id="31">小米 2s</li>
+            <li data-id="32">小米 2</li>
+            <li data-id="33">小米Note</li>
+            <li data-id="34">红米 Note</li>
+            <li data-id="35">红米 2</li>
+        </ul>
+        <ul id="J_hw">
+            <li data-id="36">荣耀 7</li>
+            <li data-id="37">荣耀 6 Plus</li>
+            <li data-id="38">荣耀 6</li>
+            <li data-id="39">P8 max</li>
+            <li data-id="40">P8</li>
+            <li data-id="41">P7</li>
+            <li data-id="42">Mate7</li>
+            <li data-id="43">G7</li>
+        </ul>
+    </div>
+</div>
+<!--fix menu over -->
+<!--phone pic start-->
+
+<div class="layout1200 mt25 clearfix" id="J_step1">
+    {$phone.html}
+    <div class="faultList fr mr50">
+        <div class="title mt25 ml20 fl">
+            <div class="word fl">已选择故障</div>
+            <div class="num fl ml15">0</div>
+        </div>
+        <ul class="bill ml20 fl mt25 fl">
+        </ul>
+        <div class="referencePrice ml20 fl mt30">
+            <div style="width: 100%; height: 1px; background-color: #fff;"></div>
+            <span class="fl">维修参考价</span><span class="fr">￥<span id="J_referencePrice">0</span></span>
+        </div>
+        <div class="fl w100 mt20">
+            <div class="confirm hand" id="J_confirmBtn" data-checkbill="false">
+                无法描述故障
+            </div>
+        </div>
+    </div>
+    <div class="repairsDislog hand" style="top:200px; left: 200px;">报修</div>
+</div>
+<!--phone pic over-->
+<!--user info start-->
+<div class="layout1200 mt25 clearfix" id="J_step2" style="display: none">
+    <div class="userInfoMain">
+        <form action="check.php" method="post">
+            <div class="tier faultDesc">
+                <span>留言</span> <input class="ml20" name="" id="faultDescription" placeholder="如果您无法判断故障，请在此做简要描述，工程师会稍后联系您" />
+            </div>
+            <div class="tier">
+                姓名 <input class="ml20 orderName" maxlength="20" type="text" placeholder="输入您的大名"/>
+                <span class="ml25">手机</span>
+               <span class="sendCodeWrap">
+                   <input class="phoneNumber" maxlength="11" type="text"  placeholder="输入手机号码"/>
+                    <span class="hand ml10" id="J_sendCode">发送验证码</span><span class="ml10 again">60秒</span>
+                    <span class="splitBlock">|</span>
+                    <input class="verifyCode" maxlength="11" type="text"  placeholder="输入验证码"/>
+               </span>
+            </div>
+            <div class="tier mt30 ieZindex20">
+                地区
+                <span class="selectWrap ml20">
+                    <label><select id="J_province" data-ui-select></select></label>
+                    <span class="splitBlock">|</span>
+                    <label><select id="J_city" data-ui-select></select></label>
+                    <span class="splitBlock">|</span>
+                    <label><select id="J_district" data-ui-select></select></label>
+                </span>
+            </div>
+            <div class="tier mt30">
+                地址
+                <input style="width: 604px;" class="ml20 orderAddress" maxlength="100" type="text"  placeholder="街道地址"/>
+            </div>
+            <div class="tier mt30">
+                邮箱(选填)
+                <input style="width: 557px;" class="ml20 orderEmail" maxlength="100" type="text"  placeholder="邮箱地址"/>
+            </div>
+            <div class="tier mt30">
+                方式  <label class="ml20">
+                    <input type="radio" name="category" value="1" data-ui-radio  checked/>
+                    上门
+                </label>
+                <label class="ml40">
+                    <input type="radio" name="category" value="2" data-ui-radio disabled/>
+                    寄修
+                </label>
+                <label class="ml40">
+                    <input type="radio" name="category" value="3" data-ui-radio disabled/>
+                    到店
+                </label>
+            </div>
+            <div class="tier mt30">
+                发票
+                <label class="ml20 invoiceLabel">
+                    <input type="radio" name="invoice" value="0" data-ui-radio checked="checked" />
+                    不需要
+                </label>
+                <label class="invoiceLabel" style="margin-left:22px;">
+                    <input type="radio" name="invoice" value="1" data-ui-radio />
+                    需要
+                </label>
+                <input maxlength="20" type="text" id="J_invoice" placeholder="输入发票抬头"/>
+            </div>
+            <div class="tier mt30" id="J_color">
+                颜色
+                <?php
+                    $colors=$phone[colors];
+                 ?>
+                <volist name="colors" id="vo">
+                    <label <?php if($key==0){?>class="ml20"<?php } ?><?php else {?>class="ml40" <?php } ?>>
+                    <input type="radio" name="orderColor" value="{$vo.name}" data-ui-radio  <?php if($key==0){?>checked<?php } ?> />
+                    {$vo.name}
+                    </label>&nbsp;
+                </volist>
+
+            </div>
+            <div class="tier mt60 actionBtn">
+                <div class="btn fl hand orgBtn" id="J_back">上一步</div>
+                <div class="btn fl hand orgBtn" id="J_submit">提交订单</div>
+            </div>
+            <div class="contractWrap">
+                <label><input type="checkbox" name="" id="agreeContract" checked disabled> 我同意 </label><span id="contractBtn" class="decoration">维修服务条款</span>
+            </div>
+        </form>
+    </div>
+</div>
+<!--user info over-->
+<!--flow start-->
+<div class="flow"></div>
+<!--flow over-->
+<include file="Public:footer"/>
+
+<% include footer %>

@@ -1,0 +1,369 @@
+/*Banner*/
+.indexBanner{width: 100%;height:360px; overflow: hidden; position: relative}
+.indexBanner .main{ width: 1920px;left: 50%; margin-left: -950px; position:absolute; overflow: hidden}
+#J_stage{height:360px;}
+#J_stage .actor{height:360px; float: left}
+.indexBanner .sign{ position:absolute;width:100%; height: 6px; bottom: 20px;}
+#J_sign{ margin: 0 auto; width: 200px;}
+#J_sign a,#J_sign li,#J_sign.selected{ float: left; height: 16px; width: 16px; border: 2px #FFFFFF solid; margin: 0 10px 0 10px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;}
+#J_sign .selected{background-color: #fff}
+
+/*maintain*/
+.maintainMain{height: 260px;}
+.maintainMain .title{ font-size: 20px; margin: 0 auto ; width:100%; text-align: center; height: 100px; line-height: 83px; color: #f3b612}
+.maintainMain .menuMain{width: 100%; height:177px;}
+.maintainMain .menuMain .abox{width: 145px; height:160px; margin: 0 13px 0 13px}
+.maintainMain .menuMain .menu{background: url("../images/index/maintainMenu.png?v=1.0.0") no-repeat;width: 120px;height:120px;}
+.maintainMain .menuMain .menuWord{ width: 120px;height: 30px; font-size: 19px; text-align: center; margin-top: 40px; color: #333}
+
+/*History*/
+.history{height: 410px;}
+.history .title{ font-size: 20px; margin: 0 auto ; width:100%; text-align: center; height: 123px; line-height:123px; color: #f3b612}
+.history .hotList{width:188px;border:1px solid; float: left;margin-left: 54px; margin-right: 54px; -moz-border-radius: 15px;-webkit-border-radius: 15px;border-radius:15px; overflow: hidden}
+.history .hotList.org{border-color: #f6d44b}
+.history .hotList.green{border-color: #9ad586}
+.history .hotList.blue{border-color: #9cd7f5}
+.history .hotList.purple{border-color: #9db3fa}
+.history .hotList .roof{width: 100%;height:52px;position: relative;-moz-border-radius: 14px 14px 0 0;-webkit-border-radius:  14px 14px 0 0;border-radius: 14px 14px 0 0}
+.history .hotList .roof .brandLogo{background: url("../images/index/brand.png?v=1.0.0") no-repeat; position: absolute}
+.history .hotList .roof .brandName{position: absolute}
+.history .hotList .roof.org{ background-color: #f6d44b}
+.history .hotList .roof .brandName{font-size: 18px; top: 15px;left:21px; width: 150px; text-align: center}
+.history .hotList .roof.green{ background-color: #9ad586}
+.history .hotList .roof.blue{ background-color: #9cd7f5}
+.history .hotList .roof.purple{ background-color: #9db3fa}
+.history .hotList .sheet { width:188px;font-size: 18px; color: #333}
+.history .hotList .sheet li{ width:188px; height: 40px; line-height: 40px; filter:alpha(opacity=0);-moz-opacity:0;opacity:0;+filter:alpha(opacity=100);font-size: 14px; position: relative;}
+.history .hotList .sheet li .icon{ display: block; width: 20px; height: 40px;position: absolute;right:0;top:0;background-image:url("../images/public/icon.png"); background-repeat: no-repeat;}
+.history .hotList .sheet li .itemWrap{overflow: hidden;padding:0 20px;}
+.history .hotList .sheet li span{display: block;position: relative;}
+.history .hotList .sheet li .icon_down .icon{ background-position:-484px 11px;}
+.history .hotList .sheet li .icon_line .icon{ background-position:-434px 11px;}
+.history .hotList .sheet li .icon_up .icon{ background-position:-459px 11px;}
+html>/**/body .history .hotList .sheet li{filter:alpha(opacity=100)}
+.history .hotList .sheet li{opacity:1 \0/IE9;}
+.history .hotList .sheet li.start{
+    animation-duration: 3s;
+    animation-name:listAnimation;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-name:listAnimation;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-duration: 3s;
+    -moz-animation-name:listAnimation;
+    -moz-animation-fill-mode: both;
+    -o-animation-duration: 3s;-o-animation-name:listAnimation;-o-animation-fill-mode: both;
+    animation-fill-mode: both;}
+.history .hotList .sheet li.gray{ background-color: #f2f2f2}
+
+@-webkit-keyframes listAnimation {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        -moz-transform: perspective(400px) rotateY(90deg);
+        -o-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        filter:alpha(opacity=0);
+        -moz-opacity:0;
+        opacity:0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        -moz-transform: perspective(400px) rotateY(-10deg);
+        -o-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg)
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        -o-transform: perspective(400px) rotateY(10deg);
+        -moz-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        -moz-transform: perspective(400px) rotateY(0deg);
+        -o-transform: perspective(400px) rotateY(0deg);
+        transform: perspective(400px) rotateY(0deg);
+        filter:alpha(opacity=100);
+        -moz-opacity:1;
+        opacity:1;
+    }
+}
+
+@-moz-keyframes listAnimation {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        -moz-transform: perspective(400px) rotateY(90deg);
+        -o-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        filter:alpha(opacity=0);
+        -moz-opacity:0;
+        opacity:0;
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        -moz-transform: perspective(400px) rotateY(-10deg);
+        -o-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg)
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        -o-transform: perspective(400px) rotateY(10deg);
+        -moz-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        -moz-transform: perspective(400px) rotateY(0deg);
+        -o-transform: perspective(400px) rotateY(0deg);
+        filter:alpha(opacity=100);
+        -moz-opacity:1;
+        opacity:1;
+    }
+}
+
+@-o-keyframes listAnimation {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        -moz-transform: perspective(400px) rotateY(90deg);
+        -o-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        filter:alpha(opacity=0);
+        -moz-opacity:0;
+        opacity:0;
+
+
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        -moz-transform: perspective(400px) rotateY(-10deg);
+        -o-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg)
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        -o-transform: perspective(400px) rotateY(10deg);
+        -moz-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        -moz-transform: perspective(400px) rotateY(0deg);
+        -o-transform: perspective(400px) rotateY(0deg);
+        filter:alpha(opacity=100);
+        -moz-opacity:1;
+        opacity:1;
+    }
+}
+
+@keyframes listAnimation {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(90deg);
+        -moz-transform: perspective(400px) rotateY(90deg);
+        -o-transform: perspective(400px) rotateY(90deg);
+        transform: perspective(400px) rotateY(90deg);
+        filter:alpha(opacity=0);
+        -moz-opacity:0;
+        opacity:0;
+
+
+    }
+
+    40% {
+        -webkit-transform: perspective(400px) rotateY(-10deg);
+        -moz-transform: perspective(400px) rotateY(-10deg);
+        -o-transform: perspective(400px) rotateY(-10deg);
+        transform: perspective(400px) rotateY(-10deg)
+    }
+
+    70% {
+        -webkit-transform: perspective(400px) rotateY(10deg);
+        -o-transform: perspective(400px) rotateY(10deg);
+        -moz-transform: perspective(400px) rotateY(10deg);
+        transform: perspective(400px) rotateY(10deg)
+    }
+
+    100% {
+        -webkit-transform: perspective(400px) rotateY(0deg);
+        -moz-transform: perspective(400px) rotateY(0deg);
+        -o-transform: perspective(400px) rotateY(0deg);
+        filter:alpha(opacity=100);
+        -moz-opacity:1;
+        opacity:1;
+
+
+    }
+}
+/*second*/
+.secondHandMain{height:416px;}
+.secondHandMain .title{ font-size: 20px; margin: 0 auto ; width:100%; text-align: center; height: 123px; line-height:123px; color: #f3b612}
+.secondHandMain .phoneMain{width: 100%;height: 377px;}
+.secondHandMain .phoneMain .left{ width: 50%; height:377px;position: relative}
+.secondHandMain .phoneMain .right{ width: 50%; height:377px;position: relative}
+.secondHandMain .phoneMain .pic{ width: 160px; text-align: center}
+.secondHandMain .phoneMain .name{font-size: 18px; color:#333; margin-top:30px; text-align: center; width: 160px;display: none}
+.secondHandMain .phoneMain .btn{
+    display: none;
+    text-align:center;
+    margin-top: 10px;
+}
+.secondHandMain .phoneMain .btn a{
+    color:#fbfbfb;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #ffb123;
+    font-size: 18px;
+}
+.secondHandMain .phoneMain li:hover .btn{
+    display: block;
+}
+.secondHandMain .phoneMain .left li,.secondHandMain .phoneMain .right li{position: absolute;filter:alpha(opacity=0);-moz-opacity:0;opacity:0;}
+
+/*trade in*/
+.tradeIn{height:730px;}
+.tradeIn .shade{ position: absolute;z-index: 1;background-color: #000;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5; display: none}
+.tradeIn .title{ font-size: 20px; margin: 0 auto ; width:100%; text-align: center; height: 123px; line-height:123px; color: #f3b612}
+.tradeIn .main{ height: 534px; width: 100%}
+.tradeIn .main .buyNowBtn,.tradeIn .main .tradeInBtn{ width: 117px; height:52px;; text-align: center; font-size: 20px; line-height: 52px; -moz-border-radius: 25px;-webkit-border-radius: 25px;border-radius:25px; display: block ;color: #fbfbfb}
+.tradeIn .main .buyNowBtn{ background-color: #e8bd1c}
+.tradeIn .main .tradeInBtn{ background-color: #40dbb1}
+.tradeIn .main .left{width:236px;height:534px;}
+.tradeIn .main .middle{width:653px;height:534px;}
+.tradeIn .main .right{width:236px;height:534px}
+.tradeIn .main .left-line-left{height: 534px ; width: 37px;}
+.tradeIn .main .left-line-left .line{height: 534px; width: 18px; border-right: 1px #d6d6d6 solid}
+.tradeIn .main .left-line-right{height: 534px ; width: 37px;}
+.tradeIn .main .left-line-right .line{height: 534px; width: 18px; border-right: 1px #d6d6d6 solid}
+.tradeIn .main .middle .top{width:653px;height:228px;}
+.tradeIn .main .middle .top-line-bottom{height: 37px; width: 653px;}
+.tradeIn .main .middle .top-line-bottom .line{height: 18px; width:203px; border-bottom: 1px #d6d6d6 solid;}
+.tradeIn .main .middle .top-line-bottom .line.long{width:653px;}
+.tradeIn .main .middle .bottom{width:653px;height:269px;}
+.tradeIn .main .middle .bottom .left,.tradeIn .main .middle .bottom .right{ width: 308px; height:302px; float: left}
+.tradeIn .main .middle .bottom .left-line-right{ width: 37px; height:260px; float: left}
+.tradeIn .main .middle .bottom .left-line-right .line{height:260px;}
+.tradeIn .main .priceWrap{
+    width: 107px;
+    height: 50px;
+    position: absolute;
+    overflow: hidden;
+}
+.tradeIn .main .priceWrap li{
+    float: left;
+    width: 53px;
+    font-size: 16px;
+}
+.tradeIn .main .priceWrap .newPrice{
+    border-right:1px solid #D6D6D6;
+    color: #79bd48;
+    text-align: left;
+}
+.tradeIn .main .priceWrap .changePrice{
+    color: #ffb123;
+    text-align: right;
+}
+.tradeIn .main .iphone6 .priceWrap{
+    position: absolute;
+    top: 441px;
+    left:114px;
+}
+.tradeIn .main .iphone6p .priceWrap{
+    position: absolute;
+    top: 37px;
+    left:279px;
+}
+.tradeIn .main .mi4note .priceWrap{
+    position: absolute;
+    top: 119px;
+    left:8px;
+}
+.tradeIn .main .galaxynote4 .priceWrap{
+    position: absolute;
+    top: 119px;
+    left:139px;
+}
+.tradeIn .main .galaxys6 .priceWrap{
+    position: absolute;
+    top: 443px;
+    left:33px;
+}
+@-webkit-keyframes  shinewhite {
+    from { -webkit-box-shadow: 0 0 15px #bbb;
+        -moz-box-shadow:0 0 15px #bbb;
+        box-shadow: 0 0 15px #bbb;
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px #fbfbfb;
+        -moz-box-shadow:0 0 20px #fbfbfb;
+        box-shadow: 0 0 20px #fbfbfb;
+    }
+    to { -webkit-box-shadow: 0 0 15px #bbb;
+        -moz-box-shadow:0 0 15px #bbb;
+        box-shadow: 0 0 15px #bbb;
+    }
+}
+@-o-keyframes  shinewhite {
+    from { -webkit-box-shadow: 0 0 15px #bbb;
+        -moz-box-shadow:0 0 15px #bbb;
+        box-shadow: 0 0 15px #bbb;
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px #fbfbfb;
+        -moz-box-shadow:0 0 20px #fbfbfb;
+        box-shadow: 0 0 20px #fbfbfb;
+    }
+    to { -webkit-box-shadow: 0 0 15px #bbb;
+        -moz-box-shadow:0 0 15px #bbb;
+        box-shadow: 0 0 15px #bbb;
+    }
+}
+@-moz-keyframes  shinewhite {
+    from { -webkit-box-shadow: 0 0 15px #bbb;
+        -moz-box-shadow:0 0 15px #bbb;
+        box-shadow: 0 0 15px #bbb;
+    }
+    50% {
+        -webkit-box-shadow: 0 0 20px #fbfbfb;
+        -moz-box-shadow:0 0 20px #fbfbfb;
+        box-shadow: 0 0 20px #fbfbfb;
+    }
+    to { -webkit-box-shadow: 0 0 15px #bbb;
+        -moz-box-shadow:0 0 15px #bbb;
+        box-shadow: 0 0 15px #bbb;
+    }
+}
+.tradeIn .main .buyNowBtn:hover,.tradeIn .main .tradeInBtn:hover{-webkit-animation-name: shinewhite; -webkit-animation-duration: 2s; -webkit-animation-iteration-count: infinite;
+    -moz-animation-name: shinewhite; -moz-animation-duration: 2s; -moz-animation-iteration-count: infinite;
+    animation-name: shinewhite; animation-duration: 2s; animation-iteration-count: infinite;}
+
+/*index footer*/
+.indexFooter{width: 100%; height: 350px;background-color: #f2f2f2}
+.indexFooter .left{width: 1012px; height:350px;position: relative}
+.indexFooter .left .computerImg{position: absolute;top:43px;left:20px;}
+.indexFooter .left .companyInfo{width:408px;height: 350px;text-align: right;position: absolute;right: 0}
+.indexFooter .left .phone{width: 19px; height: 30px;}
+.indexFooter .left .phoneNumber{ height:34px; color: #666;}
+.indexFooter .left .phoneNumber .phone,.indexFooter .left .phoneNumber span{vertical-align: middle;}
+.indexFooter .left .phoneNumber .phone{margin-right: 2px;}
+.indexFooter .left .computer{width: 100px; height: 100px;margin-top:90px;margin-right:2px;}
+.indexFooter .left .computerName{ font-size: 16px;line-height: 16px; color: #999999;}
+.indexFooter .right .navigate{width: 80px; padding-left:11px;height: 151px;border-left: 1px #b5b5b5 solid; right: 88px;position: absolute ; top: 90px;}
+.indexFooter .right .navigate a{height: 45px;width: 100px; line-height: 16px; font-size: 16px; color:#999999; display: block}
+.indexFooter .right .navigate .navigateLast{height: 16px;}
+.indexFooter .right{width:180px;height:350px; position: relative}

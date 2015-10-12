@@ -1,0 +1,170 @@
+.selectWrap{
+    width: 624px;}
+.sendCodeWrap{
+    width: 414px;
+    display: inline-block;
+    border-bottom:1px solid #999999;
+}
+.sendCodeWrap input{
+    border-bottom: 0;
+}
+.sendCodeWrap .splitBlock{
+    margin-left: 6px;
+}
+/*fixMenu*/
+.fixMenu{width: 1025px; margin: 0 auto; height: 48px; border:1px #434343 solid}
+.fixMenu li{ width:20%;*width: 204px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; border-left: 1px #434343 solid;height: 48px;line-height: 48px; text-align: center; font-size: 20px; color: #333;float: left}
+.fixMenu li.first{border: 0px;}
+.fixMenu li:hover{-webkit-animation-name: menuChange; -webkit-animation-duration:0.5s; -webkit-animation-fill-mode: both;
+    animation-name: menuChange; animation-duration:0.5s; animation-fill-mode: both; background-color: #434343;color:#fbfbfb;
+}
+.fixMenu li.select{background-color: #434343;color:#fbfbfb;}
+.fixModel{width: 1023px; color:#333; min-height:93px; margin: 0 auto;font-size: 18px;}
+.fixModel .support{ width: 65px; height: 120px;}
+.fixModel ul{width: 958px; min-height:120px; float: left;display: none}
+.fixModel ul li{float: left; margin: 0 15px 0 15px;cursor:pointer; padding-bottom: 5px;margin-bottom: 10px;border-bottom: 5px solid #fbfbfb}
+.fixModel ul li:hover{border-bottom: 5px solid #434343;}
+.fixModel ul li.chosed{border-bottom: 5px solid #434343;}
+
+/*phone pic*/
+.phonePic{ width: 670px; height: 770px; position: relative; margin-left: 70px;}
+.phonePic .fault{position: absolute; color: #333; font-size: 18px;cursor:pointer;}
+/*fault list*/
+.faultList{width: 308px; height:456px; background-color: #eeeeee; border: 1px #d6d6d6 solid}
+.faultList .title{width: 100%;height: 26px;}
+.faultList .title .word{color:#333; font-size: 18px;}
+.faultList .title .num{width: 26px; height: 26px; line-height: 26px;-moz-border-radius: 15px; background-color: #ffb123; text-align: center;font-size: 16px;
+    -webkit-border-radius: 15px;
+    border-radius:15px; }
+.faultList .bill{width: 287px; height:180px; overflow: hidden; font-size: 18px;color: #333;overflow:auto;}
+.faultList .bill li{width: 270px; height:53px; line-height: 53px;*width:250px;overflow: hidden;}
+.faultList .bill li .del{width: 19px; height:19px; background-color: #ffb123; color: #fbfbfb ;text-align: center; margin-top: 17px; margin-left: 17px; line-height: 16px; -webkit-border-radius: 19px;
+    border-radius: 19px;-moz-border-radius: 19px; font-weight: bold}
+.faultList .bill .marketPrice{text-decoration:line-through; color: #999; margin-left: 10px;font-size: 16px;}
+.faultList .referencePrice{font-size: 18px;width: 270px;color:#333; height: 80px; line-height: 80px; border-top: 1px solid #dedede}
+.faultList .confirm{width: 160px; height:40px;background-color: #ffb123; margin: 0 auto; font-size:20px; text-align: center; line-height: 40px;}
+
+/*repairs dislog*/
+.repairsDislog,.repairsDislog.ok{position: absolute;width: 76px; height: 36px; ;z-index: 100;border: 2px solid #ffb123; -moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;text-align: center;color:#ffb123; font-size: 20px; line-height: 36px;background-color: #fbfbfb}
+.repairsDislog{display: none}
+.repairsDislog.ok{background-color: #ffb123; color: #fbfbfb}
+.repairsDislog.disabled{border-color: #999; color: #999}
+/*flow*/
+.flow{ background:url('../images/fixing/flow.png') center no-repeat; width:100%; height: 98px; border-top:1px solid #b5b5b5; border-bottom: 1px solid #b5b5b5; margin-top:200px;margin-bottom:200px; }
+
+/*user info*/
+.userInfoMain{width: 1000px;height: 890px;position: relative;margin: 0 auto;}
+.userInfoMain .tier{width: 99%; line-height: 33px; font-size: 18px; color: #666}
+.userInfoMain .tier input{width: 120px; height: 18px;}
+.userInfoMain .tier .again{font-size:16px; color: #e3e3e3; width: 80px;display: none }
+.userInfoMain .tier input[type=radio]{width: 20px;}
+.userInfoMain .tier select{width: 158px; height: 50px; padding-left:30px;font-size: 18px; color:#333 ;border:1px solid #666;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px; }
+.userInfoMain .faultDesc{
+    margin-bottom: 30px;
+    vertical-align: middle;
+}
+.userInfoMain .faultDesc input{
+    width: 604px;
+    vertical-align: middle;
+}
+.userInfoMain .tier .btn{margin: 120px 0 0 327px;}
+#J_sendCode{color:#ffb123;font-size: 16px;text-decoration: underline;display:inline-block; width: 80px;}
+.userInfoMain #J_invoice{width: 423px;}
+.userInfoMain #J_submit{background-color: #ffb123;color: #fbfbfb;}
+.userInfoMain #J_back{margin-left: 0;}
+@-webkit-keyframes  menuChange {
+    from { background-color: #fbfbfb;
+        color:#434343;
+
+    }
+    to { background-color: #434343;
+        color:#fbfbfb;
+    }
+}
+/*place an order succeed*/
+.orderSucceed{width:680px; height: 384px; background-color: #f2f2f2;border:10px solid #666666}
+.orderSucceed .succeedCartoon{width:40px; height:40px;}
+.orderSucceed .title{width:500px;height: 40px;font-size:20px; color:#ffb123; margin: 38px 0 0 173px;text-align: center}
+.orderSucceed .service{ width: 100%; height:30px; line-height: 30px; text-align: center; font-size: 18px;color:#999999; margin-top:20px;text-align: center}
+.orderSucceed .runningMan{ width: 100%; height:34px; color:#ffb123; font-size: 18px;; margin-top: 50px; position: relative;}
+.orderSucceed .runningMan .catoon{width: 300px;; height:47px;position: absolute;left:0;top:-20px;filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity:0;}
+.orderSucceed .runningMan span{display: block;margin-top: -51px;margin-left: -125px;}
+.orderSucceed .runningMan img{width: 92px;height:50px; margin-left: -225px}
+.orderSucceed .tips{ width: 100%; text-align: center; font-size: 18px;color:#999}
+.orderSucceed .btn{ width: 500px; margin: 60px 0 0 118px;}
+
+.userInfoMain .actionBtn{
+    overflow: hidden;
+}
+/*contact*/
+.contractWrap{
+    font-size: 16px;
+    color: #999999;
+    margin-top: 10px;
+    margin-left: 521px;
+}
+.contractWrap .decoration{
+    color: #ffb123;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.guidePopBg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    z-index: 999;
+    left: 0;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+    background-color: rgb(0, 0, 0);
+}
+.stepGuideWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;left:0;
+    z-index: 1000;}
+.stepGuide{
+    height: 1000px;
+    position: relative;
+
+}
+.stepGuide .stepFirst,.stepGuide .stepSecond,.stepGuide .stepThird,.stepGuide .hideBtn{
+    position: absolute;
+    display: none;
+}
+.stepGuide .stepFirst{
+    width: 243px;
+    height: 86px;
+    background: url("../images/fixing/step_first.png") left top no-repeat;
+    top: 240px;
+    left: 324px;
+}
+.stepGuide .stepSecond{
+    width: 302px;
+    height: 58px;
+    background: url("../images/fixing/step_second.png") left top no-repeat;
+    top: 482px;
+    left: 647px;
+}
+.stepGuide .stepThird{
+    width: 268px;
+    height: 59px;
+    background: url("../images/fixing/step_third.png") left top no-repeat;
+    top: 712px;
+    left: 637px;
+}
+.stepGuide .hideBtn{
+    top: 270px;
+    left: 743px;
+}
+
+/*飞入动画样式*/
+.bird{width: 26px; height:26px; background-color: #ffb123;  -webkit-border-radius: 15px;
+    border-radius: 15px;-moz-border-radius: 15px;}
